@@ -472,11 +472,6 @@ body.sepia-theme #toolbar-title {
 
 
 
-
-
-
-
-
 /* 自定义输入框的容器：采用 Flex 布局让它们并排 */
 .custom-input-container {
     display: flex;
@@ -524,4 +519,22 @@ body.sepia-theme #toolbar-title {
 /* 强制输入逻辑：当存在这个 class 时，隐藏所有的标准墨水选项 */
 .hide-choices-for-input .choice {
     display: none !important;
+}
+
+
+
+/* ================================================================= */
+/* 不可点击选项 (Unclickable Choice) 样式                              */
+/* ================================================================= */
+
+/* 让它半透明变暗，视觉上一看就是被禁用的 */
+.choice.unclickable {
+    opacity: 0.35 !important; 
+    cursor: not-allowed !important; /* 强制显示禁止符号 */
+}
+
+/* 覆盖原本选项悬停时会变亮、变白的特效 */
+.choice.unclickable:hover {
+    opacity: 0.35 !important;
+    color: inherit !important;
 }
